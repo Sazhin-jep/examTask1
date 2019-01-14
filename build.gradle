@@ -21,3 +21,12 @@ jar {
     baseName = 'Exam1' 
     version = '1.0' 
 }
+
+test {
+    filter {
+        includeTestsMatching "*Test"
+    }
+}
+
+
+
