@@ -6,6 +6,7 @@
  */
 
  apply plugin: 'java'
+ apply plugin: 'pmd'
 
  repositories { 
 	mavenCentral()
@@ -28,5 +29,8 @@ test {
     }
 }
 
-
-
+pmd {
+	ignoreFailures = true
+    toolVersion = '6.8.0'
+    ruleSetFiles = files("pmd.xml")
+}
